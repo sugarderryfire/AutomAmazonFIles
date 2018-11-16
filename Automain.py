@@ -67,7 +67,6 @@ def start_requests():
     currentID=sys.argv[2]
     browser = Browser('firefox')
     browse(browser, key, currentID)
-    time.sleep(time2Reboot)
     browser.quit()
     file = open("finish.txt", "wb")
     file.close()
