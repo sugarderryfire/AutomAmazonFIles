@@ -171,9 +171,7 @@ def switchIP():
 
 
 def main():
-    while(True):
-        time.sleep(5)
-        start_requests()
+    start_requests()
 
 
 
