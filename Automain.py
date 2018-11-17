@@ -11,6 +11,7 @@ import openpyxl
 import urllib2
 import random
 import sys
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 
@@ -46,7 +47,9 @@ def AutomateBrowse():
         "network.proxy.socks_port": proxyPort,
         "network.proxy.socks_remote_dns": True
     }
-    browser = Browser('firefox')
+    cap = DesiredCapabilities().FIREFOX.copy()
+    cap["marionette"] = False
+    browser = Browser('firefox',capabilities={'acceptSslCerts': True})
     checkIP(browser)  # get the first IP
     #browser.visit(url2)  # visit google
     print currentIP
