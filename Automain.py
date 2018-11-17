@@ -68,7 +68,9 @@ def start_requests():
     #keywordsList, IDlist = readWordsExcel()
     key=sys.argv[1]
     currentID=sys.argv[2]
-    browser = Browser('firefox')
+    cap = DesiredCapabilities().FIREFOX.copy()
+    cap["marionette"] = False
+    browser = Browser('firefox',capabilities={'acceptSslCerts': True})
     browse(browser, key, currentID)
     browser.quit()
     file = open("finish.txt", "wb")
