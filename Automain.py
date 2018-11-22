@@ -75,6 +75,7 @@ def start_requests():
     browser.quit()
     file = open("finish.txt", "wb")
     file.close()
+    sys.exit(0)
 
 
 
@@ -128,7 +129,7 @@ def loadMoreResults(browser,pages):
 
 
 def generateRandomINT(min1,max1):
-    generatedNum=random.randint(min1,max1)
+    generatedNum=random.randint(min1-1,max1-1)
     return generatedNum
 
 
@@ -172,7 +173,7 @@ def switchIP():
 
 def main():
     start_requests()
-    sys.exit(0)
+    #sys.exit(0)
 
 
 
