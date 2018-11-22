@@ -12,6 +12,7 @@ import urllib2
 import random
 import sys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+import os
 
 
 
@@ -75,7 +76,8 @@ def start_requests():
     browser.quit()
     file = open("finish.txt", "wb")
     file.close()
-    sys.exit(0)
+    os.system('logout')
+    #sys.exit(0)
 
 
 
