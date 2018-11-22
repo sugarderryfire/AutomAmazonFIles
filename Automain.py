@@ -76,7 +76,7 @@ def start_requests():
     browser.quit()
     file = open("finish.txt", "wb")
     file.close()
-    os.system('logout')
+    os.system('exit')
     #sys.exit(0)
 
 
