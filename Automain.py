@@ -172,7 +172,7 @@ def switchIP():
 
 
 def main():
-    start_requests()
+    #start_requests()
     #sys.exit()
 
 
