@@ -174,7 +174,7 @@ def switchIP():
 def main():
     print '1'
     #start_requests()
-    exit()
+    raise SystemExit
 
 
 
