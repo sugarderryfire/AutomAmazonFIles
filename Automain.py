@@ -172,8 +172,8 @@ def switchIP():
 
 
 def main():
-    #start_requests()
-    sys.exit(0)
+    start_requests()
+    #sys.exit()
 
 
 
