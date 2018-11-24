@@ -172,8 +172,7 @@ def switchIP():
 
 
 def main():
-    print '1'
-    #start_requests()
+    start_requests()
     raise SystemExit
 
 
