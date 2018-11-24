@@ -74,8 +74,8 @@ def start_requests():
     browser = Browser('firefox',capabilities={'acceptSslCerts': True})
     browse(browser, key, currentID)
     browser.quit()
-    file = open("finish.txt", "wb")
-    file.close()
+    #file = open("finish.txt", "wb")
+    #file.close()
 
 
 
@@ -172,8 +172,8 @@ def switchIP():
 
 
 def main():
-    start_requests()
-    #sys.exit(0)
+    #start_requests()
+    sys.exit(0)
 
 
 
