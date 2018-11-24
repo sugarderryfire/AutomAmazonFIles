@@ -173,6 +173,7 @@ def switchIP():
 
 def main():
     start_requests()
+    print 'test3'
     #sys.exit(0)
 
 
