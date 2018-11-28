@@ -93,8 +93,6 @@ def execute_command3(hostIP):
     client = paramiko.SSHClient()
     client.load_system_host_keys()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    comm1='yes "" | /usr/bin/Xvfb :99 -ac -screen 0 1024x768x8'
-    comm2='export DISPLAY=:99'
     # Connect/ssh to an instance
     try:
 	time.sleep(5)
@@ -104,8 +102,10 @@ def execute_command3(hostIP):
 	execute(client,'sudo apt -y install xvfb')
 #	execute(client,comm1)
         #execute(client,comm2)
-	#os.system(mandatoryCommand)
-	returned_output = subprocess.check_output(mandatoryCommand)	
+	mandatoryCommand=mandatoryCommand+" &"
+	os.system(mandatoryCommand)
+	#execute(client,mandatoryCommand)
+	#returned_output = subprocess.check_output(mandatoryCommand)	
 	print 'test1v'
 	#execute(client,'python Automain.py blockchain block.chain.technology')
         # close the client connection once the job is done
@@ -113,25 +113,6 @@ def execute_command3(hostIP):
     except Exception, e:
         print e
 
-def execute_command4():
-    key = paramiko.RSAKey.from_private_key_file('ec2keyInstance4.pem')
-    client = paramiko.SSHClient()
-    client.load_system_host_keys()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    comm1='/usr/bin/Xvfb :99 -ac -screen 0 1024x768x8 & export DISPLAY=:99 & python Automain.py blockchain block.chain.technology'
-    comm2='yes "" | export DISPLAY=:99'
-    # Connect/ssh to an instance
-    try:
-	time.sleep(5)
-	print 'fourth stage'
-        # Here 'ubuntu' is user name and 'instance_ip' is public IP of EC2
-        client.connect(hostname=hostIP, username="ubuntu", pkey=key)
-	#execute(client,comm2)
-	execute(client,'python Automain.py blockchain block.chain.technology')
-        # close the client connection once the job is done
-   	client.close()
-    except Exception, e:
-        print e
 
 
 
