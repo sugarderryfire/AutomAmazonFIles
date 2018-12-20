@@ -66,16 +66,18 @@ def readWordsExcel():
 
 
 def start_requests():
-    #keywordsList, IDlist = readWordsExcel()
-    key=sys.argv[1]
-    currentID=sys.argv[2]
+    key=""
+    argumentsLength=len(sys.argv) #get the number of arguments given
+    counterTemp=1 # index number of arguments
+    while(counterTemp!=argumentsLength-1):
+            key=key+sys.argv[counterTemp] + " "
+            counterTemp=counterTemp+1   
+    currentID=sys.argv[counterTemp]
     cap = DesiredCapabilities().FIREFOX.copy()
     cap["marionette"] = False
     browser = Browser('firefox',capabilities={'acceptSslCerts': True})
     browse(browser, key, currentID)
     browser.quit()
-    #file = open("finish.txt", "wb")
-    #file.close()
 
 
 
@@ -85,10 +87,6 @@ def browse(browser, key,currentID):
     time.sleep(8)
     playStoreSearchFill=playStoreSearch+key
     browser.visit(playStoreSearchFill)
-    #search = browser.find_by_id(searchIDbutton)
-    #search.type('type',key)
-    #search.fill('\n')
-    #search.send_keys(Keys.RETURN)
     time.sleep(10)
     loadMoreResults(browser, 3)
     appText='Blockchain Technology Course'
@@ -179,6 +177,5 @@ def main():
 
 if __name__=="__main__":
     main()
-
 
 
