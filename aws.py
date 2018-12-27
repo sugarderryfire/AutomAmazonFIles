@@ -28,7 +28,7 @@ def config_instances():
 
 def create_instances():
     #create instances.
-    ec2_instances = ec2.create_instances(ImageId="ami-0f65671a86f061fcd",MinCount=1,MaxCount=1,KeyName="ec2keyInstance4")
+    ec2_instances = ec2.create_instances(ImageId="ami-0ac019f4fcb7cb7e6",MinCount=1,MaxCount=1,KeyName="ec2keyInstance4")
     time.sleep(10)
     return ec2_instances
 
@@ -176,7 +176,7 @@ def get_random(min1,max1):
     return chosenNumber
 
 
-ec2 = boto3.resource('ec2',region_name="us-east-2")
+ec2 = boto3.resource('ec2',region_name="us-east-1")
 
 #execute_command
 #config_instances()
