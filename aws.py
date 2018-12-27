@@ -28,7 +28,7 @@ def config_instances():
 
 def create_instances():
     #create instances.
-    ec2_instances = ec2.create_instances(ImageId="ami-0ac019f4fcb7cb7e6",MinCount=1,MaxCount=1,KeyName="ec2keyInstance4")
+    ec2_instances = ec2.create_instances(ImageId="ami-0f65671a86f061fcd",MinCount=1,MaxCount=1,KeyName="ec2keyInstance4")
     time.sleep(10)
     return ec2_instances
 
