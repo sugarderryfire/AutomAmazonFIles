@@ -176,7 +176,7 @@ def get_random(min1,max1):
     return chosenNumber
 
 
-ec2 = boto3.resource('ec2',region_name="us-east-1")
+ec2 = boto3.resource('ec2',region_name="us-east-2")
 
 #execute_command
 #config_instances()
