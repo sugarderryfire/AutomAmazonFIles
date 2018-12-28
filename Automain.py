@@ -25,7 +25,7 @@ googleURL = "http://www.google.co.il"
 fileName = r'c:\temp\File.xlsx'
 travels = ['t1', 't2', 't3', 't4', 't5', 't6']  # columns name of the pages that need to be travel.
 geoLocationURL=r'http://www.geoplugin.net/json.gp?ip='
-playStoreURL=r'https://play.google.com/store'
+playStoreURL=r'https://play.google.com/store/apps'
 fileNameWords=r'words.xlsx'
 searchIDbutton='gbqfq'
 playStoreSearch=r'https://play.google.com/store/search?q='
