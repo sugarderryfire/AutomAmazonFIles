@@ -73,6 +73,7 @@ def start_requests():
             key=key+sys.argv[counterTemp] + " "
             counterTemp=counterTemp+1   
     currentID=sys.argv[counterTemp]
+    key=key+"&c=apps"
     cap = DesiredCapabilities().FIREFOX.copy()
     cap["marionette"] = False
     browser = Browser('firefox',capabilities={'acceptSslCerts': True})
