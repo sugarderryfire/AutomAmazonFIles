@@ -1,9 +1,0 @@
-this project is suppose to create a lot of instances to surf the play store and generate traffic to specific apps in the play store.
-
-
-budoyoni is the manager and the budoyoni2 is the slave.
-
-
-the project suppose to create every day a finite number of different instances - instances from different regions
-and even different images (ubuntu windows and more) maybe later.
-every time we change region we need to create another key pair and another user in IAM.
