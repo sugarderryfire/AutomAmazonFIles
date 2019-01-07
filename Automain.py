@@ -94,7 +94,7 @@ def browse(browser, key,currentID):
     parentTag=childTag.find_by_xpath('..').click()
     time.sleep(5)
     jumpDown(browser)
-    time.sleep(generateRandomINT(210, 360))
+    time.sleep(generateRandomINT(310, 430))
     jumpUp(browser)
     time.sleep(30)
 
