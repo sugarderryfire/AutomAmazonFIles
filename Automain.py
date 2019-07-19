@@ -89,7 +89,7 @@ def browse(browser, key,currentID):
     playStoreSearchFill=playStoreSearch+key
     browser.visit(playStoreSearchFill)
     time.sleep(10)
-    loadMoreResults(browser, 3)
+    loadMoreResults(browser, 5)
     childTag=browser.find_link_by_partial_href(currentID)
     parentTag=childTag.find_by_xpath('..').click()
     time.sleep(5)
